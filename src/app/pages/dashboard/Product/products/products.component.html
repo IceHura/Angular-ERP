@@ -1,0 +1,25 @@
+<main class="content">
+    <div class="products-header">
+        <h1>Products</h1>
+        <button class="add-button" (click)="add()">
+            <span class="add-icon">+</span> Add
+        </button>
+    </div>
+    <div class="product-list">
+        @for (product of products; track $index) {
+            <div class="details">
+                <p><strong>ID:</strong> {{ product.id }}</p>
+                <p><strong>Name:</strong> {{ product.name }}</p>
+                <p><strong>Stock:</strong> {{ product.stock }}</p>
+                <div class="action-buttons">
+                    <button class="edit-button" (click)="edit(product.id!)">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="delete-button" (click)="delete(product.id!)">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </div>
+            </div>
+        }
+    </div>
+</main>

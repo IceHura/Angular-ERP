@@ -1,0 +1,27 @@
+<main class="content">
+    <div class="orders-header">
+        <h1>Orders</h1>
+        <button class="add-button" (click)="add()">
+            <span class="add-icon">+</span> Add
+        </button>
+    </div>
+    <div class="order-list">
+        @for (order of orders; track $index) {
+            <div class="details">
+                <p><strong>ID:</strong> {{ order.id }}</p>
+                <p><strong>Product Id:</strong> {{ order.productId}}</p>
+                <p><strong>Quantity:</strong> {{ order.quantity }}</p>
+                <p><strong>Client Id:</strong> {{ order.userId }}</p>
+                <p><strong>Created at:</strong> {{ order.createdAt }}</p>
+                <div class="action-buttons">
+                    <button class="edit-button" (click)="edit(order.id!)">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="delete-button" (click)="delete(order.id!)">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </div>
+            </div>
+        }
+    </div>
+</main>

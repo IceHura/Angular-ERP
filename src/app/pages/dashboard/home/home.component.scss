@@ -1,0 +1,35 @@
+  .content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .picture {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .picture img {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  .text {
+    flex: 2;
+  }
+  
+  .text h2 {
+    margin-bottom: 10px;
+  }
+  
+  .text p {
+    margin: 5px 0;
+    color: #333;
+    line-height: 1.6;
+  }

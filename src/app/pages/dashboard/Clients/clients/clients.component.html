@@ -1,0 +1,28 @@
+<main class="content">
+    <div class="clients-header">
+        <h1>Clients</h1>
+        <button class="add-button" (click)="add()">
+            <span class="add-icon">+</span> Add
+        </button>
+    </div>
+    <div class="client-list">
+        @for (client of clients; track $index) {
+            <div class="details">
+                <p><strong>ID:</strong> {{ client.id }}</p>
+                <p><strong>Name:</strong> {{ client.name }}</p>
+                <p><strong>Email:</strong> {{ client.email }}</p>
+                <p><strong>Phone:</strong> {{ client.phone }}</p>
+                <p><strong>Address:</strong> {{ client.address }}</p>
+                <p><strong>Orders Id:</strong> {{ client.orders }}</p>
+                <div class="action-buttons">
+                    <button class="edit-button" (click)="edit(client.id!)">
+                      <i class="fas fa-edit"></i>
+                    </button>
+                    <button class="delete-button" (click)="delete(client.id!)">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </div>
+            </div>
+        }
+    </div>
+</main>

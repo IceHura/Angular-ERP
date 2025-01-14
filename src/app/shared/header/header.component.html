@@ -1,0 +1,24 @@
+<div class="header">
+    <a (click)="navigateTo('/home')" class="logo">ERP</a>
+    @if(username)
+      {
+        <nav class="nav-menu">
+            <a (click)="navigateTo('/products')" class="nav-item">Products</a>
+            <a (click)="navigateTo('/orders')" class="nav-item">Orders</a>
+            <a (click)="navigateTo('/customers')" class="nav-item">Clients</a>
+        </nav>
+      }
+    <div class="user-actions">
+      @if(username)
+      {
+        <span class="user-login">{{ username }}</span>
+        <button class="log-out" (click)="logout()">
+          <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+        </button>
+      }
+      @else{
+        <span class="user-login" (click)="login()">Sign in</span>
+      }
+     
+    </div>
+</div>
